@@ -190,7 +190,7 @@ function App() {
               </div>
             </div>
 	    <div id="frontpage-content-blog">
-              <h2 className='text-5xl text-blue-700 mb-9 font-zonaBold text-center mt-8'>Anetti lood</h2>
+              <h2 className='text-5xl text-blue-700 font-zonaBold text-center mt-8'>Anetti lood</h2>
               {/* <div class="blog-list" className='flex flex-wrap justify-between items-center text-center box-border'>
                 <div className='w-1/3 max-w-xs '>
                   <div class="item-image"><a href="/"><img src="//www.anettkontaveit.ee/photos/60236FAF-461A-49DB-8AA7-D08C9881005A_1_201_a_block.jpeg" alt="Lacoste"></img></a></div>
@@ -205,7 +205,7 @@ function App() {
               </div> */}
               
             </div>
-            <section className="bg-white py-8 px-4 sm:px-8">
+            <section className="flex justify-center bg-white py-8 px-4 sm:px-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 max-w-screen-lg">
                 <div className=" p-4">
                   <img
