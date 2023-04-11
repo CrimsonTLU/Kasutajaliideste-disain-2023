@@ -55,7 +55,7 @@ function App() {
             </ul>
           </div>
           <div id="lang" className="flex w-32 justify-end items-center pl-5">
-            <a className="flex w-24 font-poppins font-light py-2 px-4 text-white justify-center items-center border border-solid rounded-full border-white text-xs hover:bg-white hover:text-black transition-colors" href="#">IN ENGLISH</a>
+            <a className="flex w-24 font-poppins font-light py-2 px-4 text-white justify-center items-center border border-solid rounded-full border-white text-[11px] hover:bg-white hover:text-black transition-colors" href="#">IN ENGLISH</a>
           </div>
         </div>
       </div>
@@ -125,14 +125,15 @@ function App() {
             </div>
           </section>
 
-          <div id="frontpage-content" className="flex flex-col w-full z-50">
-            <div id="frontpage-content-about" className="px-8 py-14 flex flex-row justify-between">
+          <div id="frontpage-content" className="flex flex-col w-full z-60">
+            <div id="frontpage-content-about" className="w-full max-w-[1160px] px-8 py-14 flex flex-row justify-between mx-auto">
               <div id="about" className="flex flex-col w-1/2">
                 <h2 className="text-5xl text-blue-700 mb-9 font-zonaBold">Anettist</h2>
                 <p>Alustanud ema Ülle Milk’i käe all kuueaastasena treeninguid, jõudsin juba kolm aastat hiljem, oma teisel võistlusaastal esimese tiitlivõiduni. Eesti noorte meistrivõistluste finaalis (T-10) alistasin ligi 2,5 tundi kestnud kolmesetilises raskes heitluses oma tolleaegse peamise koduse konkurendi Mari Kalma 4:6;6:4;6:2.<br/><br/></p>
                 <p>Oli aasta 2004 ja Püünsi kooli 9aastase aktiivse koolitüdrukuna olin lisaks tennisetrennidele jaganud oma aega ka koorilaulule ja rahvatantsule. Nüüd jõudis kätte hetk, kus tantsutrennid said tasutud esinemisega 17. Üldtantsupeol – peab ju iga õige eestlane vähemalt ühel laulu- või tantsupeol kaasa lööma.<br/><br/></p>
+                <a className="flex w-2/5 bg-[url('https://www.anettkontaveit.ee/assets/white-arrow-right.svg')] bg-no-repeat bg-[90%]  font-poppins font-normal px-8 py-4 justify-center items-center border border-solid rounded-full border-gray text-sm hover:bg-blue-700 hover:text-white hover:w-[42%] transition-all" href="#">Loe täpsemalt</a>
               </div>
-              <div id="facts" className="flex w-1/2 pl-8">
+              <div id="facts" className="flex pl-8 2-1/2">
               <div id="frontpage-facts-desktop" className="hidden lg:flex items-stretch flex-wrap">
 								
                 <div className="flex flex-col relative w-1/2 p-6 justify-center items-center after:content-[''] after:bg-[#e8e8e8] after:w-[1px] after:absolute after:top-4 after:bottom-4 after:right-0 ">
@@ -189,7 +190,7 @@ function App() {
             </div>
               </div>
             </div>
-	    <div id="frontpage-content-blog">
+	      <div id="frontpage-content-blog" className="mx-auto w-full max-w-[1160px]">
               <h2 className='text-5xl text-blue-700 font-zonaBold text-center mt-8'>Anetti lood</h2>
               {/* <div class="blog-list" className='flex flex-wrap justify-between items-center text-center box-border'>
                 <div className='w-1/3 max-w-xs '>
@@ -204,9 +205,8 @@ function App() {
 
               </div> */}
               
-            </div>
-            <section className="flex justify-center bg-white py-8 px-4 sm:px-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 max-w-screen-lg">
+            <section className="flex flex-col justify-center bg-white py-8 px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
                 <div className=" p-4">
                   <img
                     src="//www.anettkontaveit.ee/photos/60236FAF-461A-49DB-8AA7-D08C9881005A_1_201_a_block.jpeg"
@@ -217,6 +217,9 @@ function App() {
                   <p className='pl-3'>
                     Eesti esireket, WTA maailma edetabelis kõrgele teisele kohale tõusnud Anett Kontaveit alustab koostööd kogenud Saksa treeneri Torben Beltziga.
                   </p>
+                  <div id="readmore" className="flex">
+                    <a href="#" className="pl-3 pr-4 py-2 bg-[url('https://www.anettkontaveit.ee/assets/dark-arrow.svg')] bg-no-repeat bg-[100%] font-normal text-sm text-gray-600 hover:pr-6 hover:text-blue-700 transition-all">Loe lähemalt</a>
+                  </div>
                 </div>
                 <div className="p-4">
                   <img
@@ -228,6 +231,9 @@ function App() {
                   <p className='pl-3'>
                     Eesti esireketil Anett Kontaveidil on selja taga karjääri edukaim hooaeg, mille käigus kirjutas ta mitmel korral ümber Eesti tenniseajalugu. Uuele aastale läheb ta vastu uute sihtidega.
                   </p>
+                  <div id="readmore" className="flex">
+                    <a href="#" className="pl-3 pr-4 py-2 bg-[url('https://www.anettkontaveit.ee/assets/dark-arrow.svg')] bg-no-repeat bg-[100%] font-normal text-sm text-gray-600 hover:pr-6 hover:text-blue-700 transition-all">Loe lähemalt</a>
+                  </div>
                 </div>
                 <div className='p-4'>
                   <img
@@ -239,10 +245,61 @@ function App() {
                   <p className='pl-3'>
                     Eesti esinumber Anett Kontaveit ja tema senine treener Nigel Sears otsustasid ligi kolm aastat kestnud koostööle joone alla tõmmata.
                   </p>
+                  <div id="readmore" className="flex">
+                    <a href="#" className="pl-3 pr-4 py-2 bg-[url('https://www.anettkontaveit.ee/assets/dark-arrow.svg')] bg-no-repeat bg-[100%] font-normal text-sm text-gray-600 hover:pr-6 hover:text-blue-700 transition-all">Loe lähemalt</a>
+                  </div>
                 </div>
+              </div>
+              <div className="flex justify-center">
+              <a className="flex bg-[url('https://www.anettkontaveit.ee/assets/white-arrow-right.svg')] bg-no-repeat bg-[90%]  font-poppins font-normal px-8 py-4 justify-center items-center border border-solid rounded-full border-gray text-sm hover:bg-blue-700 hover:text-white hover:px-10 transition-all" href="#">Vaata kõiki</a>
               </div>
             </section>
           </div>
+        </div>
+
+        <div id="frontpage-content-results" className="flex justify-between items-center w-full px-0 pt-14 pb-7 font-poppins">
+        <div id="results-image" className="w-1/2 bg-[url('https://www.anettkontaveit.ee/images/tulemused-bg.jpg')] bg-no-repeat bg-right bg-[auto_100%] h-[800px]"></div>
+						<div id="results-content" className="w-1/2 pt-[100px] self-start">
+							<div id="results" className="w-full max-w-[580px] pr-7">
+								<h2 className="text-5xl text-blue-700 font-zonaBold mb-8 text-left">Tulemused</h2>
+								<div id="results-wrapper">
+                  <div id="tournament-4925993" className="border-t border-b border-[rgba(0,0,0,.06)] border-solid">
+                    <div id="results-info" className="flex justify-between items-center py-6">
+                      <div id="results-info-date" className="flex-[0_0_auto] min-w-[85px] text-lg font-zonaBold">
+                        <b className="font-semibold">jaan</b>
+                        <br/>
+                        <p className="font-zonaLight py-2">2023</p>
+                      </div>
+                      <div id="results-info-tournament" className="flex-auto font-zonaLight text-lg font-normal">
+                        <div>Australian Open, Melbourne, AUS</div>
+                        <small className="text-sm mt-1">Grand Slam</small>
+                      </div>
+                    </div>
+
+                    <div id="results-matches" className="font-light">
+                        <div id="result-matches-block">
+                          <div id="result-matches-match" className="flex justify-between items-center text-[15px] font-poppins py-2.5 border-t border-[rgba(0,0,0,.06)] border-solid">
+                              <div id="result-matches-match-round" className="flex-[0_0_auto] pr-2.5 min-w-[90px]">Last 128</div>
+                              <div id="result-matches-match-opponent" className="flex-auto">Julia Grabher <span style={{color: "#717171"}}>(AUT)</span></div>
+                              <div id="result-matches-match-score" className="flex-[0_0_auto] font-semibold pl-5">6-2 6-3</div>
+                          </div>
+                          <div id="result-matches-match" className="flex justify-between items-center text-[15px] font-poppins py-2.5 border-t border-[rgba(0,0,0,.06)] border-solid">
+                            <div id="result-matches-match-round" className="flex-[0_0_auto] pr-2.5 min-w-[90px]">Last 64</div>
+                            <div id="result-matches-match-opponent" className="flex-auto">Magda Linette <span style={{color: "#717171"}}>(POL)</span></div>
+                            <div id="result-matches-match-score" className="flex-[0_0_auto] font-semibold pl-5">6-3 3-6 4-6</div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+								<div id="more">
+                  <a className="flex bg-[url('https://www.anettkontaveit.ee/assets/white-arrow-right.svg')] bg-no-repeat bg-[90%] w-2/5 mt-12 font-poppins font-normal px-8 py-4 justify-center items-center border border-solid rounded-full border-gray text-sm hover:bg-blue-700 hover:text-white hover:w-[42%] transition-all" href="#">Vaata kõiki tulemusi</a>
+                </div>
+								
+							</div>
+						</div>
+        </div>
       </div>
 
     </div>
