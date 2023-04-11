@@ -213,8 +213,8 @@ function App() {
                     alt="Anetti lugu 1"
                     className="w-full h-48 object-cover mb-4"
                   />
-                  <a className="text-2xl text-bold font-zonaBold text-black font-normal hover:text-blue-700" href='/'>Aneti uus treener on kogenenud sakslane</a>
-                  <p>
+                  <a className="flex mb-3 pl-3 text-2xl text-bold font-zonaBold text-black font-normal hover:text-blue-700" href='/'>Aneti uus treener on kogenenud sakslane</a>
+                  <p className='pl-3'>
                     Eesti esireket, WTA maailma edetabelis kõrgele teisele kohale tõusnud Anett Kontaveit alustab koostööd kogenud Saksa treeneri Torben Beltziga.
                   </p>
                 </div>
@@ -224,8 +224,8 @@ function App() {
                     alt="Anetti lugu 2"
                     className="w-full h-48 object-cover mb-4"
                   />
-                  <a className="text-2xl text-bold font-zonaBold text-black font-normal hover:text-blue-700" href='/'>Karjääri parima hooaja teinud Anett sihib slämmivõitu</a>
-                  <p>
+                  <a className="flex mb-3 pl-3 text-2xl text-bold font-zonaBold text-black font-normal hover:text-blue-700" href='/'>Karjääri parima hooaja teinud Anett sihib slämmivõitu</a>
+                  <p className='pl-3'>
                     Eesti esireketil Anett Kontaveidil on selja taga karjääri edukaim hooaeg, mille käigus kirjutas ta mitmel korral ümber Eesti tenniseajalugu. Uuele aastale läheb ta vastu uute sihtidega.
                   </p>
                 </div>
@@ -235,8 +235,8 @@ function App() {
                     alt="Anetti lugu 3"
                     className="w-full h-48 object-cover mb-4"
                   />
-                  <a className="text-2xl text-bold font-zonaBold text-black font-normal hover:text-blue-700" href='/'>Anett Kontaveit ja Nigel Sears otsustasid koostöö lõpetada</a>
-                  <p>
+                  <a className="flex mb-3 pl-3 text-2xl text-bold font-zonaBold text-black font-normal hover:text-blue-700" href='/'>Anett Kontaveit ja Nigel Sears otsustasid koostöö lõpetada</a>
+                  <p className='pl-3'>
                     Eesti esinumber Anett Kontaveit ja tema senine treener Nigel Sears otsustasid ligi kolm aastat kestnud koostööle joone alla tõmmata.
                   </p>
                 </div>
