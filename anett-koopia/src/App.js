@@ -299,8 +299,32 @@ function App() {
 								
 							</div>
 						</div>
+
+            
+
+        </div>
+        
+      </div>
+
+      <section className="w-full max-w-[1160px] px-8 py-14 flex flex-row justify-between mx-auto bg-gray-100">
+      <div className="container">
+        <h2 className="text-5xl text-blue-700 mb-9 font-zonaBold">Järgmised turniirid</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-md px-5 py-5 pr-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 min-w-[50px]">
+              <img
+                    src="//www.anettkontaveit.ee/assets/reketid.svg"
+                    alt="reketid"
+                    className="h-[55px] py-2 after:content-[''] after:bg-[#e8e8e8] after:w-[1px] after:absolute after:top-4 after:bottom-4 after:right-0"
+                  />
+              <div className=''>
+                <p className="flex text-gray-600 mb-0">Mubadala Abu Dhabi Open, Abu Dhabi, UAE</p>
+                <small className="text-gray-600 mb-1">WTA $500K </small>
+              </div>
+              <p className="text-gray-600 mb-1">06.02-12.02.2023</p>
+            </div>
         </div>
       </div>
+    </section>
 
     </div>
     
