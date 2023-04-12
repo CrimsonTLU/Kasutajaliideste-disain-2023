@@ -42,9 +42,9 @@ function App() {
           </a>
           </div>
           
-          <div id='wta-ranking' className='flex-[0_0_auto] text-left py-[18px] pb-2.5 font-zonaBold text-[18px] leading-[18px] font-normal text-white'>
+          <div id='wta-ranking' className='flex-[0_0_auto] text-left py-[18px] pb-2.5 font-zonaBold text-[18px] leading-[18px] font-normal text-white gap-[2px]'>
             WTA
-            <span className='font-black font-zonaBold leading-[2px]'>70</span>
+            <span className='font-black font-zonaBold leading-[2px] pl-[2px]'>70</span>
           </div>
           <div
             id='menu'
@@ -114,11 +114,11 @@ function App() {
           <div id='hero-diagonal' className="absolute z-[141] top-[655px] -left-[100px] -right-[100px] h-[200px] bg-[#fbfbfb] -rotate-3"></div>
         </div>
         <div id='social-links' className="-right-[50px] top-[300px] absolute z-[142] rotate-90 uppercase font-zonaBold text-[13px] leading-[13px] font-normal">
-          <a class='social-bt' target='_blank' href='https://twitter.com/AnettKontaveit'>
+          <a className="inline-block mx-2.5 pb-[7px] text-white hover:underline" target='_blank' href='https://twitter.com/AnettKontaveit'>
             Twitter
           </a>
           <a
-            class='social-bt'
+            className="inline-block mx-2.5 pb-[7px] text-white hover:underline"
             target='_blank'
             href='https://www.instagram.com/anett_kontaveit/?hl=en'
           >
