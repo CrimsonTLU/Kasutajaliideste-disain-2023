@@ -19,75 +19,78 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   return (
-    <div id='content'>
+    <div id='content' className="w-full h-full m-0 p-0 overflow-x-hidden overflow-y-auto bg-white font-poppins text-[15px] font-light text-[#272d30]">
       <div
         id='header'
-        className={'${scrollPosition > 0 ? "invert" : ""} flex w-full fixed top-0 z-50 h-20'}
+        className={'${scrollPosition > 0 ? "invert" : ""} block w-full fixed top-0 z-[999] h-20'}
       >
-        <div id='header-content' className='flex px-7 w-full'>
-          <a href='/' className='flex p-1'>
+        <div id='header-content' className='flex justify-between items-center w-full h-[80px] px-[30px] my-0 mx-auto'>
+          <div id="logo" className="flex-[0_0_auto] text-left py-[5px]">
+            <a href='/'>
             {scrollPosition < 1 && (
               <img
-                className='w-[90px] h-[46px] lg:w-[137px] lg:h-[79px]'
+                className="block h-[70px]"
                 src='https://www.anettkontaveit.ee/assets/anett-logo-white.svg'
               ></img>
             )}
             {scrollPosition > 1 && (
               <img
-                className='w-[90px] h-[46px] lg:w-[137px] lg:h-[79px] invert'
+                className='block h-[70px] invert'
                 src='https://www.anettkontaveit.ee/assets/anett-logo-black.svg'
               ></img>
             )}
           </a>
-          <div className='flex justify-center items-center font-normal text-lg text-white pl-2.5 gap-2'>
-            <p className='font-zonaLight font-normal'>WTA</p>
-            <p className='font-black font-zonaBold'>61</p>
+          </div>
+          
+          <div id='wta-ranking' className='flex-[0_0_auto] text-left py-[18px] pb-2.5 font-zonaBold text-[18px] leading-[18px] font-normal text-white'>
+            WTA
+            <span className='font-black font-zonaBold leading-[2px]'>70</span>
           </div>
           <div
-            id='navbar'
-            className='hidden md:flex flex-row w-full justify-end font-zonaBold font-semibold text-xs tracking-wider'
+            id='menu'
+            className='flex-auto text-right font-zonaBold font-semibold text-[13px] leading-[13px] tracking-[1px]'
           >
-            <ul className='flex content-end items-center text-white gap-4 text-right pl-7'>
-              <li className='py-2'>
+            <ul className='list-none text-white'>
+              <li className='relative inline-block py-[7px]'>
                 <a className='text-right hover:underline underline-offset-8' href='/anettist'>
                   Anettist
                 </a>
               </li>
 
-              <li className='py-2'>
+              <li className='ml-2.5 relative inline-block py-[7px]'>
                 <a className='text-right hover:underline underline-offset-8' href='/anetti-lood'>
                   Anetti lood
                 </a>
               </li>
 
-              <li className='py-2'>
+              <li className='ml-2.5 relative inline-block py-[7px]'>
                 <a className='text-right hover:underline underline-offset-8' href='/tulemused'>
                   Tulemused
                 </a>
               </li>
 
-              <li className='py-2'>
+              <li className='ml-2.5 relative inline-block py-[7px]'>
                 <a className='text-right hover:underline underline-offset-8' href='/turniirid'>
                   Järgmised turniirid
                 </a>
               </li>
 
-              <li className='py-2'>
+              <li className='ml-2.5 relative inline-block py-[7px]'>
                 <a className='text-right hover:underline underline-offset-8' href='/sponsorid'>
                   Sponsorid
                 </a>
               </li>
 
-              <li className='py-2'>
+              <li className='ml-2.5 relative inline-block py-[7px]'>
                 <a className='text-right hover:underline underline-offset-8' href='/kontakt'>
                   Kontakt
                 </a>
               </li>
             </ul>
           </div>
-          <div id='lang' className='flex w-32 justify-end items-center pl-5'>
+          <div id='lang' className='flex-[0_0_auto] pl-5'>
             <a
-              className='flex w-24 font-poppins font-light py-2 px-4 text-white justify-center items-center border border-solid rounded-full border-white text-[11px] hover:bg-white hover:text-black transition-colors'
+              className='text-[11px] leading-[11px] py-[7px] px-[15px] border border-solid rounded-[100px] bg-[0_0] text-white hover:bg-white hover:text-black transition-all'
               href='#'
             >
               IN ENGLISH
@@ -96,40 +99,26 @@ function App() {
         </div>
       </div>
 
-      <div
-        id='hero-content'
-        className="bg-[url('https://www.anettkontaveit.ee/images/main-bg.png')]"
-      >
-        <div className='h-[700px] flex justify-center'>
-          <div id='hero-text' className='absolute left-10 right-1/2 top-1/2 z-90  text-white'>
-            <h1 className='font-stainy text-9xl font-normal -rotate-6 text-center mb-3'>Anett</h1>
-            <div
-              id='left-text'
-              className='flex w-[330px] m-auto p-5 flex-col justify-center text-center items-center font-normal text-lg text-white gap-2'
-            >
-              <hr className='w-full'></hr>
-              <p className='font-zonaLight font-normal text-center text-lg'>Anett Kontaveit</p>
-              <div className='flex gap-2 text-center'>
-                <p className='font-zonaLight font-normal text-4xl'>WTA</p>
-                <p className='font-black font-zonaBold text-4xl'>61</p>
+      <div id='hero-desktop' className="absolute top-0 left-0 right-0 h-[700px] block bg-[#004ac0] bg-[url('https://www.anettkontaveit.ee/images/main-bg.png')] bg-top bg-no-repeat bg-cover z-[140]">
+        <div id='hero-content' className="relative w-full h-full">
+          <div id='hero-text' className="absolute left-[40px] right-[55%] top-1/2 z-[143] -translate-y-1/2 text-white text-center">
+            <h1 className="font-stainy text-[160px] font-normal -rotate-[8deg] mb-2.5">Anett</h1>
+            <div id='bottom' className="w-[330px] my-0 mx-auto border-t-2 border-white border-solid p-5 text-center font-zonaBold text-[18px] leading-[18px] font-normal tracking-[1px]">
+              Anett Kontaveit
+              <div id='wta' className="pt-2.5 text-[36px] leading-[36px] tracking-[1px]">
+                WTA<span className="inline-block ml-[5px] font-black tracking-[2px]">70</span>
               </div>
             </div>
           </div>
-          <div
-            id='hero-image'
-            className="bg-[url('https://www.anettkontaveit.ee/images/anett-kontaveit-main.png')] bg-contain bg-no-repeat z-100 absolute top-28 left-1/3 right-8 w-2/3 h-4/5"
-          ></div>
-          <div
-            id='hero-diagonal'
-            className='bg-[#fbfbfb] absolute z-80 top-[655px] -left-24 -right-24 h-52 -rotate-3'
-          ></div>
+          <div id='hero-image' className="absolute z-[140] top-[90px] left-[30%] right-[30px] bottom-0 bg-[url('https://www.anettkontaveit.ee/images/anett-kontaveit-main.png')] bg-top bg-no-repeat bg-contain"></div>
+          <div id='hero-diagonal' className="absolute z-[141] top-[655px] -left-[100px] -right-[100px] h-[200px] bg-[#fbfbfb] -rotate-3"></div>
         </div>
-        <div className='flex absolute gap-2 text-white z-100 font-zonaLight font-semibold uppercase text-sm rotate-90 top-[300px] -right-12'>
-          <a className='social-bt' target='_blank' href='https://twitter.com/AnettKontaveit'>
+        <div id='social-links' className="-right-[50px] top-[300px] absolute z-[142] rotate-90 uppercase font-zonaBold text-[13px] leading-[13px] font-normal">
+          <a class='social-bt' target='_blank' href='https://twitter.com/AnettKontaveit'>
             Twitter
           </a>
           <a
-            className='social-bt'
+            class='social-bt'
             target='_blank'
             href='https://www.instagram.com/anett_kontaveit/?hl=en'
           >
@@ -138,81 +127,88 @@ function App() {
         </div>
       </div>
 
-      <div id='frontpage' className='flex flex-col justify-center bg-gray-50'>
-        <section id='sponsors' className='bg-white z-150 -rotate-3 w-full'>
-          <div id='diagonal-content' className='flex justify-center mx-24'>
+      <div id='frontpage' className='top-[700px] absolute left-0 right-0 z-[200] flex flex-col justify-center bg-[#fbfbfb]'>
+        <section id='sponsors' className="-rotate-3 -mx-[100px] z-[220] relative -top-[45px] bg-white">
+          <div id='diagonal-content' className='rotate-3 mx-[100px]'>
             <div
               id='sponsors-content'
-              className='flex flex-col justify-center px-8 py-11 rotate-3 max-w-[1160px]'
+              className='w-[100vw] max-w-[1160px] my-0 mx-auto py-[45px] px-[30px]'
             >
-              <h5 className='font-zonaLight text-black font-normal text-sm text-center'>
+              <h5 className='font-zonaBold text-[13px] leading-[13px] font-normal text-center uppercase tracking-[1px] text-[#272d30] mb-[15px]'>
                 Sponsorid
               </h5>
-              <div className='hidden md:flex justify-center gap-2'>
-                <div class='logo'>
+              <div className='flex justify-center items-center'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-lacoste.png'
                       alt='Lacoste'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-tallink.png'
                       alt='Tallink'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-telegraaf.png'
                       alt='Hotell Telegraaf'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-porsche.png'
                       alt='Porsche'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsors-zenith.png'
                       alt='Zenith'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-babolat.png'
                       alt='Babolat'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-alexela.png'
                       alt='Alexela'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
               </div>
-              <div className='flex md:hidden'>
+              <div id='sponsors-mobile' className='flex md:hidden'>
                 <div class='logo'>
                   <a href='/sponsorid'>
                     <img
@@ -240,38 +236,42 @@ function App() {
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-porsche.png'
                       alt='Porsche'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsors-zenith.png'
                       alt='Zenith'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-babolat.png'
                       alt='Babolat'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
 
-                <div class='logo'>
+                <div id='logo' className="w-full max-w-[110px] mx-5">
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-alexela.png'
                       alt='Alexela'
+                      className="w-full"
                     ></img>
                   </a>
                 </div>
@@ -280,7 +280,7 @@ function App() {
           </div>
         </section>
 
-        <div id='frontpage-content' className='flex flex-col w-full z-60'>
+        <div id='frontpage-content' className='w-full'>
           <div
             id='frontpage-content-about'
             className='w-full max-w-[1160px] px-8 py-14 flex flex-row justify-between mx-auto'
@@ -704,23 +704,36 @@ function App() {
           </div>
         </section>
 
-        <footer id='footer' className="flex justify-center py-8 font-zonaBold text-[#272d30] font-light text-[13px] leading-[13px]">
-          <div id='footer-content' className="w-full max-w-[1160px] my-0 mx-auto py-0 px-8 text-center">
-            <div className="flex justify-center">
-              <img src='https://www.anettkontaveit.ee/assets/est-copy.svg' alt='est logo' className="flex justify-center"/>
+        <footer
+          id='footer'
+          className='flex justify-center py-8 font-zonaBold text-[#272d30] font-light text-[13px] leading-[13px]'
+        >
+          <div
+            id='footer-content'
+            className='w-full max-w-[1160px] my-0 mx-auto py-0 px-8 text-center'
+          >
+            <div className='flex justify-center'>
+              <img
+                src='https://www.anettkontaveit.ee/assets/est-copy.svg'
+                alt='est logo'
+                className='flex justify-center'
+              />
             </div>
-            <div className="mt-2.5">© 2018 ANETT KONTAVEIT</div>
-            <div className="mt-2.5">
+            <div className='mt-2.5'>© 2018 ANETT KONTAVEIT</div>
+            <div className='mt-2.5'>
               <a href='mailto:anett@anettkontaveit.ee'>anett@anettkontaveit.ee</a>
             </div>
-            <div id='codelab' className="flex mt-5 justify-center">
+            <div id='codelab' className='flex mt-5 justify-center'>
               <a href='https://codelab.solutions/et'>
-                <img src='https://www.anettkontaveit.ee/assets/codelab-logo.svg' alt='Made by Codelab Solutions' className="flex justify-center"/>
+                <img
+                  src='https://www.anettkontaveit.ee/assets/codelab-logo.svg'
+                  alt='Made by Codelab Solutions'
+                  className='flex justify-center'
+                />
               </a>
             </div>
           </div>
         </footer>
-
       </div>
     </div>
   );
