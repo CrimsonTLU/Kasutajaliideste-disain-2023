@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
   const updatePosition = () => {
@@ -19,36 +18,45 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   return (
-    <div id='content' className="w-full h-full m-0 p-0 overflow-x-hidden overflow-y-auto bg-white font-poppins text-[15px] font-light text-[#272d30]">
+    <div
+      id='content'
+      className='w-full h-full m-0 p-0 overflow-x-hidden overflow-y-auto bg-white font-poppins text-[15px] font-light text-[#272d30]'
+    >
       <div
         id='header'
-        className={'${scrollPosition > 0 ? "invert" : ""} block w-full fixed top-0 z-[999] h-20'}
+        className={'${scrollPosition > 0 ? "invert" : ""} block w-full fixed top-0 z-[999] h-[60px] lg:h-20'}
       >
-        <div id='header-content' className='flex justify-between items-center w-full h-[80px] px-[30px] my-0 mx-auto'>
-          <div id="logo" className="flex-[0_0_auto] text-left py-[5px]">
+        <div
+          id='header-content'
+          className='flex justify-between items-center w-full h-[60px] lg:h-[80px] px-[20px] lg:px-[30px] my-0 mx-auto'
+        >
+          <div id='logo' className='flex-[0_0_auto] text-left py-[7px] lg:py-[5px]'>
             <a href='/'>
-            {scrollPosition < 1 && (
-              <img
-                className="block h-[70px]"
-                src='https://www.anettkontaveit.ee/assets/anett-logo-white.svg'
-              ></img>
-            )}
-            {scrollPosition > 1 && (
-              <img
-                className='block h-[70px] invert'
-                src='https://www.anettkontaveit.ee/assets/anett-logo-black.svg'
-              ></img>
-            )}
-          </a>
+              {scrollPosition < 1 && (
+                <img
+                  className='block h-[46px] lg:h-[70px]'
+                  src='https://www.anettkontaveit.ee/assets/anett-logo-white.svg'
+                ></img>
+              )}
+              {scrollPosition > 1 && (
+                <img
+                  className='block h-[46px] lg:h-[70px] invert'
+                  src='https://www.anettkontaveit.ee/assets/anett-logo-black.svg'
+                ></img>
+              )}
+            </a>
           </div>
-          
-          <div id='wta-ranking' className='flex-[0_0_auto] text-left py-[18px] pb-2.5 font-zonaBold text-[18px] leading-[18px] font-normal text-white gap-[2px]'>
+
+          <div
+            id='wta-ranking'
+            className='flex-auto lg:flex-[0_0_auto] text-left py-[8px] lg:py-[18px] pb-2.5 font-zonaBold text-[14px] leading-[14px] lg:text-[18px] lg:leading-[18px] font-normal text-white gap-[2px]'
+          >
             WTA
             <span className='font-black font-zonaBold leading-[2px] pl-[2px]'>70</span>
           </div>
           <div
             id='menu'
-            className='flex-auto text-right font-zonaBold font-semibold text-[13px] leading-[13px] tracking-[1px]'
+            className='hidden lg-flex flex-auto text-right font-zonaBold font-semibold text-[13px] leading-[13px] tracking-[1px]'
           >
             <ul className='list-none text-white'>
               <li className='relative inline-block py-[7px]'>
@@ -88,6 +96,16 @@ function App() {
               </li>
             </ul>
           </div>
+          <div id="menu-mobile" className="lg:hidden flex-[0_0_auto] text-right">
+            <div id="menutoggler-mobile-wrapper">
+              <div id="menutoggler" className="z-[114]"><a onclick="Navi.toggleMobileNavi()" className="block border border-white border-solid rounded-[50%] text-center text-white w-[30px] h-[30px] pt-[9px]"><div id="menu-icon" className="relative my-0 mx-auto rotate-0 transition-all w-4 h-4">
+                <span className="top-0 block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+                <span className="top-[4px] block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+                <span className="top-[4px] block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+                <span className="top-2 block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+              </div></a></div>
+            </div>
+          </div>
           <div id='lang' className='flex-[0_0_auto] pl-5'>
             <a
               className='text-[11px] leading-[11px] py-[7px] px-[15px] border border-solid rounded-[100px] bg-[0_0] text-white hover:bg-white hover:text-black transition-all'
@@ -99,26 +117,48 @@ function App() {
         </div>
       </div>
 
-      <div id='hero-desktop' className="absolute top-0 left-0 right-0 h-[700px] block bg-[#004ac0] bg-[url('https://www.anettkontaveit.ee/images/main-bg.png')] bg-top bg-no-repeat bg-cover z-[140]">
-        <div id='hero-content' className="relative w-full h-full">
-          <div id='hero-text' className="absolute left-[40px] right-[55%] top-1/2 z-[143] -translate-y-1/2 text-white text-center">
-            <h1 className="font-stainy text-[160px] font-normal -rotate-[8deg] mb-2.5">Anett</h1>
-            <div id='bottom' className="w-[330px] my-0 mx-auto border-t-2 border-white border-solid p-5 text-center font-zonaBold text-[18px] leading-[18px] font-normal tracking-[1px]">
+      <div
+        id='hero-desktop'
+        className="absolute top-0 left-0 right-0 h-[700px] block bg-[#004ac0] bg-[url('https://www.anettkontaveit.ee/images/main-bg.png')] bg-top bg-no-repeat bg-cover z-[140]"
+      >
+        <div id='hero-content' className='relative w-full h-full'>
+          <div
+            id='hero-text'
+            className='absolute left-[40px] right-[55%] top-1/2 z-[143] -translate-y-1/2 text-white text-center'
+          >
+            <h1 className='font-stainy text-[160px] font-normal -rotate-[8deg] mb-2.5'>Anett</h1>
+            <div
+              id='bottom'
+              className='w-[330px] my-0 mx-auto border-t-2 border-white border-solid p-5 text-center font-zonaBold text-[18px] leading-[18px] font-normal tracking-[1px]'
+            >
               Anett Kontaveit
-              <div id='wta' className="pt-2.5 text-[36px] leading-[36px] tracking-[1px]">
-                WTA<span className="inline-block ml-[5px] font-black tracking-[2px]">70</span>
+              <div id='wta' className='pt-2.5 text-[36px] leading-[36px] tracking-[1px]'>
+                WTA<span className='inline-block ml-[5px] font-black tracking-[2px]'>70</span>
               </div>
             </div>
           </div>
-          <div id='hero-image' className="absolute z-[140] top-[90px] left-[30%] right-[30px] bottom-0 bg-[url('https://www.anettkontaveit.ee/images/anett-kontaveit-main.png')] bg-top bg-no-repeat bg-contain"></div>
-          <div id='hero-diagonal' className="absolute z-[141] top-[655px] -left-[100px] -right-[100px] h-[200px] bg-[#fbfbfb] -rotate-3"></div>
+          <div
+            id='hero-image'
+            className="absolute z-[140] top-[90px] left-[30%] right-[30px] bottom-0 bg-[url('https://www.anettkontaveit.ee/images/anett-kontaveit-main.png')] bg-top bg-no-repeat bg-contain"
+          ></div>
+          <div
+            id='hero-diagonal'
+            className='absolute z-[141] top-[655px] -left-[100px] -right-[100px] h-[200px] bg-[#fbfbfb] -rotate-3'
+          ></div>
         </div>
-        <div id='social-links' className="-right-[50px] top-[300px] absolute z-[142] rotate-90 uppercase font-zonaBold text-[13px] leading-[13px] font-normal">
-          <a className="inline-block mx-2.5 pb-[7px] text-white hover:underline" target='_blank' href='https://twitter.com/AnettKontaveit'>
+        <div
+          id='social-links'
+          className='-right-[50px] top-[300px] absolute z-[142] rotate-90 uppercase font-zonaBold text-[13px] leading-[13px] font-normal'
+        >
+          <a
+            className='inline-block mx-2.5 pb-[7px] text-white hover:underline'
+            target='_blank'
+            href='https://twitter.com/AnettKontaveit'
+          >
             Twitter
           </a>
           <a
-            className="inline-block mx-2.5 pb-[7px] text-white hover:underline"
+            className='inline-block mx-2.5 pb-[7px] text-white hover:underline'
             target='_blank'
             href='https://www.instagram.com/anett_kontaveit/?hl=en'
           >
@@ -127,8 +167,14 @@ function App() {
         </div>
       </div>
 
-      <div id='frontpage' className='top-[700px] absolute left-0 right-0 z-[200] flex flex-col justify-center bg-[#fbfbfb]'>
-        <section id='sponsors' className="-rotate-3 -mx-[100px] z-[220] relative -top-[45px] bg-white">
+      <div
+        id='frontpage'
+        className='top-[700px] absolute left-0 right-0 z-[200] flex flex-col justify-center bg-[#fbfbfb]'
+      >
+        <section
+          id='sponsors'
+          className='-rotate-3 -mx-[100px] z-[220] relative -top-[45px] bg-white'
+        >
           <div id='diagonal-content' className='rotate-3 mx-[100px]'>
             <div
               id='sponsors-content'
@@ -138,72 +184,72 @@ function App() {
                 Sponsorid
               </h5>
               <div className='flex justify-center items-center'>
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-lacoste.png'
                       alt='Lacoste'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-tallink.png'
                       alt='Tallink'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-telegraaf.png'
                       alt='Hotell Telegraaf'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-porsche.png'
                       alt='Porsche'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsors-zenith.png'
                       alt='Zenith'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-babolat.png'
                       alt='Babolat'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-alexela.png'
                       alt='Alexela'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
@@ -236,42 +282,42 @@ function App() {
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-porsche.png'
                       alt='Porsche'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsors-zenith.png'
                       alt='Zenith'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-babolat.png'
                       alt='Babolat'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
 
-                <div id='logo' className="w-full max-w-[110px] mx-5">
+                <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-alexela.png'
                       alt='Alexela'
-                      className="w-full"
+                      className='w-full'
                     ></img>
                   </a>
                 </div>
