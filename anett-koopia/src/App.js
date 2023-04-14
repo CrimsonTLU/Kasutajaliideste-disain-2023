@@ -1,5 +1,7 @@
 import './App.css';
 import { useState } from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 function App() {
   const updatePosition = () => {
@@ -24,7 +26,7 @@ function App() {
     >
       <div
         id='header'
-        className={'${scrollPosition > 0 ? "invert" : ""} block w-full fixed top-0 z-[999] h-[60px] lg:h-20'}
+        className={'${scrollPosition > 0 ? "invert" : ""} block w-full fixed top-0 left-0 right-0 z-[999] h-[60px] lg:h-20'}
       >
         <div
           id='header-content'
@@ -56,7 +58,7 @@ function App() {
           </div>
           <div
             id='menu'
-            className='hidden lg-flex flex-auto text-right font-zonaBold font-semibold text-[13px] leading-[13px] tracking-[1px]'
+            className='hidden lg:block flex-auto text-right font-zonaBold font-semibold text-[13px] leading-[13px] tracking-[1px]'
           >
             <ul className='list-none text-white'>
               <li className='relative inline-block py-[7px]'>
@@ -119,17 +121,17 @@ function App() {
 
       <div
         id='hero-desktop'
-        className="absolute top-0 left-0 right-0 h-[700px] block bg-[#004ac0] bg-[url('https://www.anettkontaveit.ee/images/main-bg.png')] bg-top bg-no-repeat bg-cover z-[140]"
+        className="absolute top-0 left-0 right-0 h-[600px] lg:h-[700px] block bg-[#fbfbfb] lg:bg-[#004ac0] bg-[url('https://www.anettkontaveit.ee/images/main-bg-mobile.png')] lg:bg-[url('https://www.anettkontaveit.ee/images/main-bg.png')] bg-bottom lg:bg-top bg-no-repeat bg-[100%_auto] lg:bg-cover z-[140]"
       >
         <div id='hero-content' className='relative w-full h-full'>
           <div
             id='hero-text'
-            className='absolute left-[40px] right-[55%] top-1/2 z-[143] -translate-y-1/2 text-white text-center'
+            className='absolute left-5 right-5 lg:left-[40px] lg:right-[55%] bottom-[55%] lg:bottom-0 lg:top-1/2 z-[143] lg:-translate-y-1/2 text-white text-center'
           >
-            <h1 className='font-stainy text-[160px] font-normal -rotate-[8deg] mb-2.5'>Anett</h1>
+            <h1 className='font-stainy text-[100px] lg:text-[160px] font-normal -rotate-[8deg] mb-0 lg:mb-2.5 -ml-5 lg:ml-0'>Anett</h1>
             <div
               id='bottom'
-              className='w-[330px] my-0 mx-auto border-t-2 border-white border-solid p-5 text-center font-zonaBold text-[18px] leading-[18px] font-normal tracking-[1px]'
+              className='w-[250px] lg:w-[330px] my-0 mx-auto border-t-2 border-white border-solid p-5 text-center font-zonaBold text-[18px] leading-[18px] font-normal tracking-[1px]'
             >
               Anett Kontaveit
               <div id='wta' className='pt-2.5 text-[36px] leading-[36px] tracking-[1px]'>
@@ -139,16 +141,16 @@ function App() {
           </div>
           <div
             id='hero-image'
-            className="absolute z-[140] top-[90px] left-[30%] right-[30px] bottom-0 bg-[url('https://www.anettkontaveit.ee/images/anett-kontaveit-main.png')] bg-top bg-no-repeat bg-contain"
+            className="absolute z-[141] lg:z-[140] top-1/2 lg:top-[90px] left-0 lg:left-[30%] right-0 lg:right-[30px] bottom-0 bg-[url('https://www.anettkontaveit.ee/images/anett-kontaveit-main.png')] bg-top bg-no-repeat bg-[auto_100%] lg:bg-contain"
           ></div>
           <div
             id='hero-diagonal'
-            className='absolute z-[141] top-[655px] -left-[100px] -right-[100px] h-[200px] bg-[#fbfbfb] -rotate-3'
+            className='lg:absolute lg:z-[141] lg:top-[655px] lg:-left-[100px] lg:-right-[100px] lg:h-[200px] lg:bg-[#fbfbfb] lg:-rotate-3'
           ></div>
         </div>
         <div
           id='social-links'
-          className='-right-[50px] top-[300px] absolute z-[142] rotate-90 uppercase font-zonaBold text-[13px] leading-[13px] font-normal'
+          className='hidden lg:block -right-[50px] top-[300px] absolute z-[142] rotate-90 uppercase font-zonaBold text-[13px] leading-[13px] font-normal'
         >
           <a
             className='inline-block mx-2.5 pb-[7px] text-white hover:underline'
@@ -169,7 +171,7 @@ function App() {
 
       <div
         id='frontpage'
-        className='top-[700px] absolute left-0 right-0 z-[200] flex flex-col justify-center bg-[#fbfbfb]'
+        className='top-[600px] lg:top-[700px] absolute left-0 right-0 z-[200] flex flex-col justify-center bg-[#fbfbfb]'
       >
         <section
           id='sponsors'
@@ -183,7 +185,7 @@ function App() {
               <h5 className='font-zonaBold text-[13px] leading-[13px] font-normal text-center uppercase tracking-[1px] text-[#272d30] mb-[15px]'>
                 Sponsorid
               </h5>
-              <div className='flex justify-center items-center'>
+              <div id="sponsor-logos-desktop" className='hidden lg:flex justify-center items-center'>
                 <div id='logo' className='w-full max-w-[110px] mx-5'>
                   <a href='/sponsorid'>
                     <img
@@ -254,24 +256,27 @@ function App() {
                   </a>
                 </div>
               </div>
-              <div id='sponsors-mobile' className='flex md:hidden'>
-                <div class='logo'>
-                  <a href='/sponsorid'>
-                    <img
-                      src='//media.voog.com/0000/0041/3736/photos/sponsorid-lacoste.png'
-                      alt='Lacoste'
-                    ></img>
-                  </a>
-                </div>
 
-                <div class='logo'>
-                  <a href='/sponsorid'>
+
+              <div id='sponsors-mobile' className='flex md:hidden'>
+                <Carousel autoPlay="true" interval={1500} infiniteLoop={true} showStatus={false} showIndicators={false}>
+                  <div class='logo'>
+                    <a href='/sponsorid'>
+                      <img
+                        src='//media.voog.com/0000/0041/3736/photos/sponsorid-lacoste.png'
+                        alt='Lacoste'
+                      ></img>
+                    </a>
+                  </div>
+
+                  <div class='logo'>
+                    <a href='/sponsorid'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/sponsorid-tallink.png'
                       alt='Tallink'
                     ></img>
-                  </a>
-                </div>
+                    </a>
+                  </div>
 
                 <div class='logo'>
                   <a href='/sponsorid'>
@@ -321,6 +326,8 @@ function App() {
                     ></img>
                   </a>
                 </div>
+                </Carousel>
+                
               </div>
             </div>
           </div>
