@@ -557,7 +557,7 @@ function App() {
               id='results-image'
               className="w-1/2 bg-[url('https://www.anettkontaveit.ee/images/tulemused-bg.jpg')] lg:bg-no-repeat lg:bg-right bg-[auto_100%] lg:h-[800px] bg bg-top-left h-[300px] bg-no-repeat"
             ></div>
-            <div id='results-content' className='w-1/2 lg:pt-[100px] self-start pt-[10px]'>
+            <div id='results-content' className='lg:w-1/2 lg:pt-[100px] lg:self-start pt-[10px]'>
               <div id='results' className='w-full lg:max-w-[580px] lg:pr-7 pr-[20px] pl-[20px] mt-0 mr-auto mb-0 ml-auto'>
                 <h2 className='text-5xl text-blue-700 font-zonaBold mb-8 text-left'>Tulemused</h2>
                 <div id='results-wrapper'>
