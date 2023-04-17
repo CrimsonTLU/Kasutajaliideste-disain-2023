@@ -551,13 +551,13 @@ function App() {
 
           <div
             id='frontpage-content-results'
-            className='flex justify-between items-center w-full px-0 pt-14 pb-7 font-poppins'
+            className='lg:flex lg:justify-between lg:items-center w-full px-0 lg:pt-14 lg:pb-7 pt-[60px] pb-[30px] font-poppins'
           >
             <div
               id='results-image'
               className="w-1/2 bg-[url('https://www.anettkontaveit.ee/images/tulemused-bg.jpg')] lg:bg-no-repeat lg:bg-right bg-[auto_100%] lg:h-[800px] bg bg-top-left h-[300px] bg-no-repeat"
             ></div>
-            <div id='results-content' className='w-1/2 md:pt-[100px] self-start pt-[10px]'>
+            <div id='results-content' className='w-1/2 lg:pt-[100px] self-start pt-[10px]'>
               <div id='results' className='w-full max-w-[580px] pr-7'>
                 <h2 className='text-5xl text-blue-700 font-zonaBold mb-8 text-left'>Tulemused</h2>
                 <div id='results-wrapper'>
