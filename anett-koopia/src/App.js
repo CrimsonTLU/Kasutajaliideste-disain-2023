@@ -6,14 +6,8 @@ import { Carousel } from 'react-responsive-carousel';
 
 function App() {
   const updatePosition = () => {
-      setScrollPosition(document.getElementById('content').pageYOffset);
+      setScrollPosition(document.getElementById('content').scrollTop);
     console.log('Scroll pos: ', scrollPosition);
-
-    if (scrollPosition > 1) {
-      document.getElementById('header').classList.add('invert', 'bg-black');
-    } else if (scrollPosition < 1) {
-      document.getElementById('header').classList.remove('invert', 'bg-black');
-    }
     
   };
 
@@ -32,7 +26,7 @@ function App() {
       >
         <div
           id='header'
-          className={'${scrollPosition > 0 ? "invert" : ""} block w-full fixed top-0 left-0 right-0 z-[999] h-[60px] lg:h-20'}
+          className={`${scrollPosition > 0 ? "invert bg-black" : ""} block w-full fixed top-0 left-0 right-0 z-[999] h-[60px] lg:h-20`}
         >
           <div
             id='header-content'
