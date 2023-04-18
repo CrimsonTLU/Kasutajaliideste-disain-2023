@@ -686,7 +686,7 @@ function App() {
 
           <section
             id='instagram diagonal'
-            className="bg-[#272d30] bg-[url('https://www.anettkontaveit.ee/images/footer-bg.png')] bg-repeat-x bg-inherit -rotate-3 -mx-24"
+            className="bg-[#272d30] bg-[url('https://www.anettkontaveit.ee/images/footer-bg.png')] bg-repeat-x bg-[size:inherit] -rotate-3 -mx-24"
           >
             <div id='diagonal-content' className='rotate-3 mx-24'>
               <div
@@ -711,8 +711,8 @@ function App() {
                 >
                   <div id='j-stacker-wrapper' className='-mx-2.5'>
                     <div id='j-stacker' className='table table-fixed w-full'>
-                      <div id="mobile-wrapper" className="w-full align-top table-cell lg:block">
-                        <div id='col1' className='w-full lg:w-1/3 px-2.5 lg:table-cell align-top float-none'>
+                      <div id="mobile-wrapper" className="w-full align-top table-cell md:block">
+                        <div id='col1' className='w-full md:w-1/2 lg:w-1/3 px-2.5 md:table-cell align-top float-none'>
                           <li
                             id='item'
                             className='mb-5 p-0 bg-white text-[#3A3A3A] border-r border-b border-solid border-[#e5e5e5]'
@@ -723,7 +723,7 @@ function App() {
                             ></img>
                           </li>
                         </div>
-                        <div id='col2' className='w-full lg:w-1/3 px-2.5 lg:table-cell align-top float-none'>
+                        <div id='col2' className='w-full md:w-1/2 lg:w-1/3 px-2.5 md:table-cell align-top float-none'>
                           <li
                             id='item'
                             className='mb-5 p-0 bg-white text-[#3A3A3A] border-r border-b border-solid border-[#e5e5e5]'
@@ -734,7 +734,7 @@ function App() {
                             ></img>
                           </li>
                         </div>
-                        <div id='col3' className='w-full lg:w-1/3 px-2.5 lg:table-cell align-top float-none'>
+                        <div id='col3' className='w-full md:w-1/2 lg:w-1/3 px-2.5 md:table-row lg:table-cell align-top float-none'>
                           <li
                             id='item'
                             className='mb-5 p-0 bg-white text-[#3A3A3A] border-r border-b border-solid border-[#e5e5e5]'
