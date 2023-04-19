@@ -339,9 +339,9 @@ function App() {
           <div id='frontpage-content' className='w-full'>
             <div
               id='frontpage-content-about'
-              className='w-full max-w-[1160px] px-8 py-14 flex flex-row justify-between mx-auto'
+              className='w-full max-w-[1160px] px-8 py-14 lg:flex lg:flex-row lg:justify-between mx-auto block'
             >
-              <div id='about' className='flex flex-col w-1/2'>
+              <div id='about' className='flex flex-col lg:w-1/2'>
                 <h2 className='text-5xl text-blue-700 mb-9 font-zonaBold'>Anettist</h2>
                 <p>
                   Alustanud ema Ülle Milk’i käe all kuueaastasena treeninguid, jõudsin juba kolm
@@ -366,9 +366,11 @@ function App() {
                   Loe täpsemalt
                 </a>
               </div>
-              <div id='facts' className='flex pl-8 2-1/2'>
-                <div id='frontpage-facts-desktop' className='hidden lg:flex items-stretch flex-wrap'>
-                  <div className="flex flex-col relative w-1/2 p-6 justify-center items-center after:content-[''] after:bg-[#e8e8e8] after:w-[1px] after:absolute after:top-4 after:bottom-4 after:right-0 ">
+
+              
+              <div id='facts' className='hidden lg:flex pl-8 2-1/2'>
+                <div id='frontpage-facts-desktop' className='flex items-stretch flex-wrap'>
+                  <div className="flex flex-col relative lg:w-1/2 p-6 justify-center items-center after:content-[''] after:bg-[#e8e8e8] after:w-[1px] after:absolute after:top-4 after:bottom-4 after:right-0 ">
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/faktid-eesti.svg'
                       alt='Elukoht'
@@ -447,6 +449,62 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <div id='facts-mobile' className='block md:hidden w-full max-w-[250px] my-0 mx-auto'>
+                  <Carousel autoPlay="true" interval={2000} infiniteLoop={true} showStatus={false} showIndicators={false}>
+                    <div className="w-[250px] h-[250px] text-center block">
+                      <a>
+                        <img
+                          src='//media.voog.com/0000/0041/3736/photos/faktid-eesti.svg'
+                          alt='Elukoht'
+                          className='h-[100px]'
+                        />
+                        <h5 className='text-center'>Elukoht</h5>
+                        <h4 className='text-center'>Viimsi vald, Harjumaa, Eesti</h4>
+                      </a>
+                    </div>
+
+                    <div className='w-[250px] h-[250px] text-center block'>
+                      <a>
+                        <img
+                          src='//media.voog.com/0000/0041/3736/photos/faktid-mangib.svg'
+                          alt='Mängib'
+                          className='h-[100px]'
+                        />
+                        <h5 className='text-center'>Mängib</h5>
+                        <h4 className='text-center'>paremakäeline (tagantkäsi kahe käega)</h4>
+                      </a>
+                    </div>
+
+                    <div className="ww-[250px] h-[250px] text-center block">
+                      <a>
+                        <img
+                          src='//media.voog.com/0000/0041/3736/photos/faktid-reketid.svg'
+                          alt='Reketid'
+                          className='h-[100px]'
+                        />
+                        <h5 className='text-center'>Reketid</h5>
+                        <h4 className='text-center'>Babolat</h4>
+                      </a>
+                    </div>
+
+                    <div className="ww-[250px] h-[250px] text-center block">
+                      <a>
+                        <img
+                          src='//media.voog.com/0000/0041/3736/photos/faktid-riietus.svg'
+                          alt='Riietus'
+                          className='h-[100px]'
+                        />
+                        <h5 className='text-center'>Riietus</h5>
+                        <h4 className='text-center'>Lacoste</h4>
+                      </a>
+                    </div>
+
+                  </Carousel>
+                  
+                </div>
+
+
             <div id='frontpage-content-blog' className='mx-auto w-full max-w-[1160px] bg-gray-50'>
               <h2 className='text-5xl text-blue-700 font-zonaBold text-center mt-8'>Anetti lood</h2>
               {/* <div class="blog-list" className='flex flex-wrap justify-between items-center text-center box-border'>
