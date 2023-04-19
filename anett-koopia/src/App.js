@@ -450,7 +450,7 @@ function App() {
               </div>
             </div>
 
-            <div id='facts-mobile' className='block md:hidden w-full max-w-[250px] my-0 mx-auto'>
+            <div id='facts-mobile' className='block lg:hidden w-full max-w-[250px] my-0 mx-auto'>
                   <Carousel autoPlay="true" interval={2000} infiniteLoop={true} showStatus={false} showIndicators={false}>
                     <div className="w-[250px] h-[250px] text-center block">
                       <a>
