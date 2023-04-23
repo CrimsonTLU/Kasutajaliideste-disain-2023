@@ -128,7 +128,7 @@ function App() {
               id='hero-text'
               className='absolute left-5 right-5 lg:left-[40px] lg:right-[55%] bottom-[55%] lg:bottom-0 lg:top-1/2 z-[143] lg:-translate-y-1/2 text-white text-center'
             >
-              <h1 className='font-stainy text-[100px] lg:text-[160px] font-normal -rotate-[8deg] mb-0 lg:mb-2.5 -ml-5 lg:ml-0'>Anett</h1>
+              <h1 className='font-stainy text-[100px] lg:text-[160px] font-normal -rotate-[8deg] mb-0 lg:mb-2.5 -ml-5 lg:ml-0 mt-[67px]'>Anett</h1>
               <div
                 id='bottom'
                 className='w-[250px] lg:w-[330px] my-0 mx-auto border-t-2 border-white border-solid p-5 text-center font-zonaBold text-[18px] leading-[18px] font-normal tracking-[1px]'
@@ -339,10 +339,10 @@ function App() {
           <div id='frontpage-content' className='w-full'>
             <div
               id='frontpage-content-about'
-              className='w-full max-w-[1160px] px-8 py-14 lg:flex lg:flex-row lg:justify-between mx-auto block'
+              className='w-full max-w-[1160px] p-5 lg:px-[30px] lg:py-[60px] lg:flex lg:flex-row lg:justify-between mx-auto block'
             >
-              <div id='about' className='flex flex-col lg:w-1/2'>
-                <h2 className='text-5xl text-blue-700 mb-9 font-zonaBold'>Anettist</h2>
+              <div id='about' className='flex flex-col lg:w-1/2 leading-[1.73]'>
+                <h2 className='text-[36px] lg:text-[48px] lg:leading-[58px] leading-[42px] text-blue-700 mb-5 lg:mb-[30px] font-zonaBold font-semibold'>Anettist</h2>
                 <p>
                   Alustanud ema Ülle Milk’i käe all kuueaastasena treeninguid, jõudsin juba kolm
                   aastat hiljem, oma teisel võistlusaastal esimese tiitlivõiduni. Eesti noorte
@@ -359,12 +359,14 @@ function App() {
                   <br />
                   <br />
                 </p>
-                <a
-                  className="flex w-2/5 bg-[url('https://www.anettkontaveit.ee/assets/white-arrow-right.svg')] bg-no-repeat bg-[90%]  font-poppins font-normal px-8 py-4 justify-center items-center border border-solid rounded-full border-gray text-sm hover:bg-blue-700 hover:text-white hover:w-[42%] transition-all"
+                <div id="button-wrapper" className="h-[50px] mt-5 w-3/5 lg:w-2/5 hover:w-[42%] transition-all">
+                  <a
+                  className="flex bg-[url('https://www.anettkontaveit.ee/assets/white-arrow-right.svg')] bg-no-repeat bg-[90%] font-poppins font-normal px-[34px] py-4 justify-center items-center border border-solid rounded-full border-gray text-sm hover:bg-blue-700 hover:text-white transition-all"
                   href='#'
                 >
                   Loe täpsemalt
                 </a>
+                </div>
               </div>
 
               
@@ -410,7 +412,7 @@ function App() {
                     <h4 className='text-center'>Lacoste</h4>
                   </div>
                 </div>
-                <div id='frontpage-facts-mobile' className='flex lg:hidden'>
+                <div id='frontpage-facts-mobile' className='flex lg:hidden mt-[30px]'>
                   <div class='fact'>
                     <img
                       src='//media.voog.com/0000/0041/3736/photos/faktid-eesti.svg'
@@ -450,7 +452,7 @@ function App() {
               </div>
             </div>
 
-            <div id='facts-mobile' className='block lg:hidden w-full max-w-[250px] my-0 mx-auto'>
+            <div id='facts-mobile' className='block lg:hidden w-full max-w-[250px] mt-[30px] mx-auto'>
                   <Carousel autoPlay="true" interval={2000} infiniteLoop={true} showStatus={false} showIndicators={false}>
                     <div className="w-[250px] h-[250px] text-center block">
                       <a>
@@ -506,7 +508,7 @@ function App() {
 
 
             <div id='frontpage-content-blog' className='mx-auto w-full max-w-[1160px] bg-gray-50'>
-              <h2 className='text-5xl text-blue-700 font-zonaBold text-center mt-8'>Anetti lood</h2>
+              <h2 className='text-center mb-[30px] text-[36px] leading-[42px] lg:text-[48px] lg:leading-[58px] font-semibold text-blue-700'>Anetti lood</h2>
               {/* <div class="blog-list" className='flex flex-wrap justify-between items-center text-center box-border'>
                   <div className='w-1/3 max-w-xs '>
                     <div class="item-image"><a href="/"><img src="//www.anettkontaveit.ee/photos/60236FAF-461A-49DB-8AA7-D08C9881005A_1_201_a_block.jpeg" alt="Lacoste"></img></a></div>
@@ -520,7 +522,7 @@ function App() {
 
                 </div> */}
 
-              <section className='flex flex-col justify-center bg-gray-50 py-8 px-4'>
+              <section className='flex flex-col justify-center bg-gray-50 pb-8 px-4'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1'>
                   <div className=' p-4'>
                     <img
@@ -621,24 +623,24 @@ function App() {
               ></div>
               <div id='results-content' className='lg:w-1/2 lg:pt-[100px] lg:self-start pt-[10px]'>
                 <div id='results' className='w-full lg:max-w-[580px] lg:pr-7 pr-[20px] pl-[20px] mt-0 mr-auto mb-0 ml-[5wv]'>
-                  <h2 className='text-5xl text-blue-700 font-zonaBold mb-8 text-left'>Tulemused</h2>
+                  <h2 className='text-[36px] leading-[42px] mb-5 font-zonaBold font-normal text-blue-700 lg:text-[48px] lg:leading-[58px] lg:mb-[30px]'>Tulemused</h2>
                   <div id='results-wrapper'>
                     <div
                       id='tournament-4925993'
                       className='border-t border-b border-[rgba(0,0,0,.06)] border-solid'
                     >
-                      <div id='results-info' className='flex justify-between items-center py-6'>
+                      <div id='results-info' className='flex flex-col lg:flex-row justify-center text-center lg:justify-between lg:text-left items-center py-6'>
                         <div
                           id='results-info-date'
-                          className='flex-[0_0_auto] min-w-[85px] text-lg font-zonaBold'
+                          className='flex-[0_0_auto] min-w-[85px] text-lg font-zonaBold lg:pr-5 lg:border-r border-solid border-[rgba(0,0,0,.06)]'
                         >
-                          <b className='font-semibold'>jaan</b>
+                          <b className='font-normal'>jaan</b>
                           <br />
-                          <p className='font-zonaLight py-2'>2023</p>
+                          <p className='font-zonaLight lg:py-2'>2023</p>
                         </div>
                         <div
                           id='results-info-tournament'
-                          className='flex-auto font-zonaLight text-lg font-normal'
+                          className='flex-auto font-zonaLight text-lg font-normal lg:pl-5'
                         >
                           <div>Australian Open, Melbourne, AUS</div>
                           <small className='text-sm mt-1'>Grand Slam</small>
@@ -653,11 +655,11 @@ function App() {
                           >
                             <div
                               id='result-matches-match-round'
-                              className='flex-[0_0_auto] pr-2.5 min-w-[90px]'
+                              className='flex-[0_0_auto] pr-2.5 min-w-[90px] lg:pr-5 lg:border-r border-solid border-[rgba(0,0,0,.06)]'
                             >
                               Last 128
                             </div>
-                            <div id='result-matches-match-opponent' className='flex-auto'>
+                            <div id='result-matches-match-opponent' className='flex-auto lg:pl-5'>
                               Julia Grabher <span style={{ color: '#717171' }}>(AUT)</span>
                             </div>
                             <div
@@ -673,11 +675,11 @@ function App() {
                           >
                             <div
                               id='result-matches-match-round'
-                              className='flex-[0_0_auto] pr-2.5 min-w-[90px]'
+                              className='flex-[0_0_auto] pr-2.5 min-w-[90px] lg:pr-5 lg:border-r border-solid border-[rgba(0,0,0,.06)]'
                             >
                               Last 64
                             </div>
-                            <div id='result-matches-match-opponent' className='flex-auto'>
+                            <div id='result-matches-match-opponent' className='flex-auto lg:pl-5'>
                               Magda Linette <span style={{ color: '#717171' }}>(POL)</span>
                             </div>
                             <div
@@ -694,7 +696,7 @@ function App() {
 
                   <div id='more'>
                     <a
-                      className="flex bg-[url('https://www.anettkontaveit.ee/assets/white-arrow-right.svg')] bg-no-repeat bg-[90%] w-2/5 mt-12 font-poppins font-normal px-8 py-4 justify-center items-center border border-solid rounded-full border-gray text-sm hover:bg-blue-700 hover:text-white hover:w-[42%] transition-all"
+                      className="flex bg-[url('https://www.anettkontaveit.ee/assets/white-arrow-right.svg')] bg-no-repeat bg-[90%] w-3/5 lg:w-2/5 mt-[45px] font-poppins font-normal px-8 py-4 justify-center items-center border border-solid rounded-full border-gray text-sm hover:bg-blue-700 hover:text-white hover:w-[42%] transition-all"
                       href='#'
                     >
                       Vaata kõiki tulemusi
@@ -704,14 +706,14 @@ function App() {
               </div>
             </div>
 
-            <section className='w-full py-8'>
+            <section className='w-full py-[30px]s'>
               <div className="w-full max-w-[1160px] my-0 mx-auto px-8 bg-[url('https://www.anettkontaveit.ee/assets/v-ljak.svg')] bg-no-repeat bg-right bg-[auto_480px] min-h-[520px]">
-                <h2 className='text-5xl text-blue-700 mb-9 font-zonaBold'>Järgmised turniirid</h2>
+                <h2 className='text-[36px] leading-[42px] mb-5 font-zonaBold font-normal text-blue-700 lg:text-[48px] lg:leading-[58px] lg:mb-[30px]'>Järgmised turniirid</h2>
                 <div className='w-full max-w-[600px] bg-white py-4 px-6'>
-                  <div className='flex justify-between items-center py-2.5'>
+                  <div className='flex flex-col lg:flex-row justify-center text-center lg:justify-between items-center py-2.5'>
                     <div
                       id='icon'
-                      className='flex-[0_0_auto] pr-5 border-r border-solid border-[rgba(0,0,0,.06)]'
+                      className='flex-[0_0_auto] lg:pr-5 lg:border-r border-solid border-[rgba(0,0,0,.06)]'
                     >
                       <img
                         src='//www.anettkontaveit.ee/assets/reketid.svg'
@@ -725,7 +727,7 @@ function App() {
                       <small className='text-gray-600 font-[15px]'>WTA $500K </small>
                     </div>
 
-                    <div className='flex-[0_0_auto] min-w-[150px] pl-5 border-l border-solid border-[rgba(0,0,0,.06)]'>
+                    <div className='flex-[0_0_auto] min-w-[150px] lg:pl-5 lg:border-l border-solid border-[rgba(0,0,0,.06)]'>
                       <p className='text-gray-600'>06.02-12.02.2023</p>
                     </div>
                   </div>
