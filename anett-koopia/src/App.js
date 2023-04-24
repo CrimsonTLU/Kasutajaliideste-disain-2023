@@ -164,7 +164,7 @@ function App() {
                               
                               
                               <div
-                                className={`fixed inset-0 z-40 bg-white shadow-md  transition-all duration-300 ${isOpen ? 'opacity-100  bg-white' : '-translate-y-full opacity-0 pointer-events-none bg'}`}
+                                className={`fixed inset-0 z-40 bg-white shadow-md  transition-all duration-300 ${isOpen ? 'opacity-100  bg-white' : '-translate-y-full opacity-0 pointer-events-none bg'} ${scrollPosition > 0 ? "invert bg-black" : ""}`}
                               >
                                 {/* phone menu items */}
                                 <div id="header-mobile_sticky" className="bg-white shadow-lg block fixed z-999 left-0 right-0 top-0 h-[60px]">
