@@ -5,17 +5,28 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 function App() {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   const updatePosition = () => {
       setScrollPosition(document.getElementById('content').scrollTop);
     console.log('Scroll pos: ', scrollPosition);
+  }; 
+
+  
+
+  /* function toggleMobileNavi() {
+    setIsOpen(!isOpen);
+  }; */
     
-  };
+
 
   useEffect(() => {
     document.getElementById("content").addEventListener('scroll', updatePosition);
   }, []);
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  
 
   return (
     <div id="wrapper" className="absolute w-full h-full">
@@ -98,16 +109,125 @@ function App() {
                 </li>
               </ul>
             </div>
-            <div id="menu-mobile" className="lg:hidden flex-[0_0_auto] text-right">
-              <div id="menutoggler-mobile-wrapper">
-                <div id="menutoggler" className="z-[114]"><a onclick="Navi.toggleMobileNavi()" className="block border border-white border-solid rounded-[50%] text-center text-white w-[30px] h-[30px] pt-[9px]"><div id="menu-icon" className="relative my-0 mx-auto rotate-0 transition-all w-4 h-4">
-                  <span className="top-0 block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
-                  <span className="top-[4px] block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
-                  <span className="top-[4px] block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
-                  <span className="top-2 block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
-                </div></a></div>
-              </div>
-            </div>
+
+                  <div id="menu-mobile" className="lg:hidden flex-[0_0_auto] text-right">
+                    <div id="menutoggler-mobile-wrapper">
+                      <div id="menutoggler" className="z-[114]">
+                       {/*  <a onClick={() => setIsOpen(!isOpen)} className="block border border-white border-solid rounded-[50%] text-center text-white w-[30px] h-[30px] pt-[9px]">
+                        
+                        </a>
+                          {isOpen && <nav>
+                            
+                            <div id="header-mobile_sticky" className="bg-white shadow-lg block fixed z-999 left-0 right-0 top-0 h-[60px]">
+                              <div
+                                id='header-content'
+                                className='flex justify-between items-center w-full h-[60px] lg:h-[80px] px-[20px] lg:px-[30px] my-0 mx-auto'
+                              >
+                                <div id='logo' className='flex-[0_0_auto] text-left py-[7px] lg:py-[5px]'>
+                                  <a href='/'>
+                                      <img
+                                        className='block bg-white h-[46px] lg:h-[70px]'
+                                        src='https://www.anettkontaveit.ee/assets/anett-logo-black.svg'
+                                      ></img>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div id="mobile-nav" className="block fixed bg-white top-[60px] bottom-0 left-0 right-0 z-899">
+                              <div id="menu-mobile-content" className="pt-[103px] pr-[32px] pb-[32px] pl-[32px] text-center ">
+                                <ul> 
+                                  <li>
+                                    <a>Anettist</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                              
+                            
+                          </nav>} */}
+
+                        <>
+                              
+                              <div id="menutoggler" className="z-[114]"></div>
+                              <a
+                                className="fixed top-4 right-4 z-50 border border-white border-fixed rounded-[50%] text-center text-white w-[30px] h-[30px] pt-[9px] focus:outline-none focus:bg-gray-300 cursor-pointer"
+                                onClick={() => setIsOpen(!isOpen)}
+                              >
+                                <div id="menu-icon" className="relative my-0 mx-auto rotate-0 transition-all w-4 h-4">
+                                  <span className="top-0 block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+                                  <span className="top-[4px] block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+                                  <span className="top-[4px] block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+                                  <span className="top-2 block absolute h-[1px] w-full bg-white rounded-[2px] rotate-0 transition-all"></span>
+                                </div></a>
+                              
+                              
+                              
+                              <div
+                                className={`fixed inset-0 z-40 bg-white shadow-md  transition-all duration-300 ${isOpen ? 'opacity-100  bg-white' : '-translate-y-full opacity-0 pointer-events-none bg'}`}
+                              >
+                                {/* phone menu items */}
+                                <div id="header-mobile_sticky" className="bg-white shadow-lg block fixed z-999 left-0 right-0 top-0 h-[60px]">
+                                  <div
+                                    id='header-content'
+                                    className='flex justify-between items-center w-full h-[60px] lg:h-[80px] px-[20px] lg:px-[30px] my-0 mx-auto'
+                                  >
+                                    <div id='logo' className='flex-[0_0_auto] text-left py-[7px] lg:py-[5px]'>
+                                      <a href='/'>
+                                          <img
+                                            className='block bg-white h-[46px] lg:h-[70px]'
+                                            src='https://www.anettkontaveit.ee/assets/anett-logo-black.svg'
+                                          ></img>
+                                      </a>
+                                    </div>
+
+                                    <div
+                                      id='wta-ranking'
+                                      className='flex-auto lg:flex-[0_0_auto] text-left py-[8px] lg:py-[18px] pb-2.5 font-zonaBold text-[14px] leading-[14px] lg:text-[18px] lg:leading-[18px] font-normal text-revert gap-[2px]'
+                                    >
+                                      WTA
+                                      <span className='font-black font-zonaBold leading-[2px] pl-[2px]'>70</span>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div id="menu-mobile" className="block fixed top-0 left-0 right-0 bottom-0  z-899">
+                                  <div id="menu-mobile-content" className="pt-[103px] pr-[32px] pb-[32px] pl-[32px] text-center ">
+                                    <ul className="m-0 p-0 text-center font-normal text-xl font-sans"> 
+                                      <li id="menu-item" className='mb-[20px]'>
+                                        <a className=" text-[#272d30] hover:text-[#004ac0] hover:underline" href="">Anettist</a>
+                                      </li>
+                                      <li id="menu-item" className='mb-[20px]'>
+                                        <a className=" text-[#272d30] hover:text-[#004ac0] hover:underline" href="">Anetti lood</a>
+                                      </li>
+                                      <li id="menu-item" className='mb-[20px]'>
+                                        <a className=" text-[#272d30] hover:text-[#004ac0] hover:underline" href="">Tulemused</a>
+                                      </li>
+                                      <li id="menu-item" className='mb-[20px]'>
+                                        <a className=" text-[#272d30] hover:text-[#004ac0] hover:underline" href="">Järgmised turniirid</a>
+                                      </li>
+                                      <li id="menu-item" className='mb-[20px]'>
+                                        <a className=" text-[#272d30] hover:text-[#004ac0] hover:underline" href="">Sponsorid</a>
+                                      </li>
+                                      <li id="menu-item" className='mb-[[20px]'>
+                                        <a className=" text-[#272d30] hover:text-[#004ac0] hover:underline" href="">Kontakt</a>
+                                      </li>
+                                    </ul>
+                                    <div id="lang" className="mt-[60px] ">
+                                      <a id="select-language" href="/" className="font-sans font-normal text-[13px] border border-solid rounded-[100px] bg-[0_0] border-black text-[#272d30] hover:bg-[#004ac0] hover:text-white transition-all py-[10px] px-[20px]">IN ENGLISH</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </>
+                        
+                          
+                        
+                      </div>
+                    </div>
+                  </div>
+
+
             <div id='lang' className='hidden lg:flex flex-[0_0_auto] pl-5'>
               <a
                 className='text-[11px] leading-[11px] py-[7px] px-[15px] border border-solid rounded-[100px] bg-[0_0] text-white hover:bg-white hover:text-black transition-all'
